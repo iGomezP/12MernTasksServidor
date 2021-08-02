@@ -17,7 +17,7 @@ app.use( express.json( { extended: true } ) );
 // Puerto de la app
 // Se crea por que en heroku se espera que la variable del entorno se llame PORT
 // ° No se puede tener el mismo puerto como cliente y servidor, deben ser diferentes en desarrollo
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 // Importar todas las rutas
 app.use( '/api/usuarios', require( './routes/usuarios' ) );
